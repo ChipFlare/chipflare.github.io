@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChipFlare Projects</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+      font-family: Arial, sans-serif;
+      background-color: #220000
+    }
+
+    /* Navbar container */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(45deg, #ff005c, #ff3800);
+      padding: 0.5rem 1rem;
+      color: white;
+    }
+
+    /* Website name */
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    /* Navigation links */
+    .navbar nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar nav a:hover {
+      color: #ddd;
+    }
+
+    /* Responsive: stack links on small screens */
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .navbar nav {
+        margin-top: 0.5rem;
+      }
+      .navbar nav a {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+    }
+
+    /* Page content */
+    .content {
+      padding: 1rem;
+      color: #f99
+    }
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start; /* aligns to left */
+}
+.project-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #644;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #fbb;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+  width: 100%;
+  max-width: 400px; /* 🔧 This keeps it from getting too wide */
+  flex: 1 1 280px; 
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card a {
+  color: #ff1e2b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+.project-card h3 {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  margin-bottom: 0.5rem;
+}
+
+.project-card a {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+    
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">ChipFlare</div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>Projects</h1>
+  </main>
+<div class="projects">
+  <div class="project-card">
+    <img src="CBPaint.webP" alt="CBPaint screenshot" />
+    <h3>CBPaint</h3>
+    <p>Draw anything on this Windows app and it will appear on your CrapBox display (Arduino)</p>
+    <a href="#">View Project</a>
+  </div>
+  
+  <div class="project-card">
+    <img src="ScreenMirror.webP" alt="Screenshot of Project Two" />
+    <h3>Screen mirror for CrapBox</h3>
+    <p>Mirror your computer screen to your CrapBox screen!</p>
+    <a href="#">View Project</a>
+  </div>
+</div>
+</body>
+</html>
