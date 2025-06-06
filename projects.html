@@ -74,6 +74,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   justify-content: flex-start; /* aligns to left */
 }
 .project-card {
@@ -129,7 +131,7 @@
   <header class="navbar">
     <div class="logo">ChipFlare</div>
     <nav>
-      <a href="home.html">Home</a>
+      <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="about.html">About</a>
     </nav>
@@ -140,18 +142,27 @@
   </main>
 <div class="projects">
   <div class="project-card">
-    <img src="CBPaint.webP" alt="CBPaint screenshot" />
+    <img src="CBPaint.webP" alt="screenshot" />
     <h3>CBPaint</h3>
     <p>Draw anything on this Windows app and it will appear on your CrapBox display (Arduino)</p>
-    <a href="#">View Project</a>
+    <a href="project.html#CBpaint">View Project</a>
   </div>
   
   <div class="project-card">
-    <img src="ScreenMirror.webP" alt="Screenshot of Project Two" />
+    <img src="ScreenMirror.webP" alt="Screenshot" />
     <h3>Screen mirror for CrapBox</h3>
     <p>Mirror your computer screen to your CrapBox screen!</p>
-    <a href="#">View Project</a>
+    <a href="project.html#screenmirror">View Project</a>
+  </div>
+  
+  <div class="project-card">
+    <img src="flappywindows.webP" alt="Screenshot" />
+    <h3>Flappy Windows</h3>
+    <p>It's just Flappy Bird? Then why are the windows moving weird?</p>
+    <p>Play flappy bird but the windows are the sprites and Windows is the game engine!</p>
+    <a href="project.html#flappywindows">View Project</a>
   </div>
 </div>
+
 </body>
 </html>

@@ -65,22 +65,26 @@
     }
 
 .content {
-  padding: 2rem;
-  color: white;
   display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  justify-content: flex-start; /* aligns to left */
 }
 
 .about-box {
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
   border: 1px solid #644;
-  padding: 1.5rem;
+  border-radius: 8px;
+  padding: 1rem;
   color: #fbb;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  max-width: 700px;
+  transition: transform 0.2s ease;
   width: 100%;
-  margin-top: 1rem;
+  max-width: 400px; /* 🔧 This keeps it from getting too wide */
+  flex: 1 1 280px; 
 }
 
 .about-box h1 {
@@ -105,7 +109,7 @@
   <header class="navbar">
     <div class="logo">ChipFlare</div>
     <nav>
-      <a href="home.html">Home</a>
+      <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="about.html">About</a>
     </nav>
@@ -117,7 +121,12 @@
     <p>I'm just a teenager working on some projects in my free time for YouTube or just for fun sometimes. They range from simple Python applications to actual software made for Windows.</p>
     <p>I also do Arduino stuff but don't post as much here because you probably don't have the hardware to run it on. I will still update you on the CrapBox project though.</p>
   </div>
+  <div class="about-box">
+    <h1>Contact</h1>
+    <a href="mailto:exploringnewbusiness@gmail.com">exploringnewbusiness@gmail.com</a>
+  </div>
 </main>
+
 
 </body>
 </html>
