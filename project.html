@@ -18,16 +18,23 @@
       font-family: Arial, sans-serif;
       background-color: #220000;
       color: white;
+       margin-top: 100px;
+      margin-bottom: 500px;
     }
 
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: linear-gradient(45deg, #ff005c, #ff3800);
-      padding: 0.5rem 1rem;
-      color: white;
-    }
+.navbar {
+  position: fixed;
+  top: 0; /* make sure it sticks to the top */
+  left: 0;
+  width: 100%; /* span full width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #ff005c, #ff3800);
+  padding: 0.5rem 1rem;
+  color: white;
+  z-index: 1000; 
+}
 
     .navbar .logo {
       font-size: 1.5rem;
@@ -46,7 +53,7 @@
       color: #ddd;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 400px) {
       .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -112,19 +119,24 @@
   max-width: 600px;
 }
 
+    #screenmirror{scroll-margin-top: 60px;}
+    #flappywindows{scroll-margin-top: 60px;}
+    #hrif{scroll-margin-top: 60px;}
+    
   </style>
 </head>
 <body>
 
   <header class="navbar">
-    <div class="logo">ChipFlare</div>
+<div class="logo">
+  <a href="index.html"><img src="logo-wide-1.png" alt="ChipFlare Logo" style="height: 40px;"></a>
+</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="about.html">About</a>
     </nav>
   </header>
-
 <div class="content" id="CBPaint">
     <h1 class="project-title">CBPaint</h1>
 

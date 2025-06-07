@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ChipFlare</title>
   <style>
-    /* Basic reset */
     * {
       margin: 0;
       padding: 0;
@@ -13,30 +12,34 @@
     }
 
     body {
-        min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-      font-family: Arial, sans-serif;
-      background-color: #220000
-    }
-
-    /* Navbar container */
-    .navbar {
+      min-height: 100vh;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: linear-gradient(45deg, #ff005c, #ff3800);
-      padding: 0.5rem 1rem;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      background-color: #220000;
       color: white;
+       margin-top: 100px;
     }
 
-    /* Website name */
+.navbar {
+  position: fixed;
+  top: 0; /* make sure it sticks to the top */
+  left: 0;
+  width: 100%; /* span full width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #ff005c, #ff3800);
+  padding: 0.5rem 1rem;
+  color: white;
+  z-index: 1000; 
+}
+
     .navbar .logo {
       font-size: 1.5rem;
       font-weight: bold;
     }
 
-    /* Navigation links */
     .navbar nav a {
       color: white;
       text-decoration: none;
@@ -49,7 +52,6 @@
       color: #ddd;
     }
 
-    /* Responsive: stack links on small screens */
     @media (max-width: 600px) {
       .navbar {
         flex-direction: column;
@@ -64,30 +66,205 @@
       }
     }
 
-.content {
-  padding: 2rem;
-  color: white;
+    .content {
+      flex: 1;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: #fbb;
+    }
+
+    .content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .video-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .video-container {
+      flex: 1 1 500px;
+      max-width: 800px;
+      aspect-ratio: 16 / 9;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .sub-counter {
+      flex: 1 1 300px;
+      max-width: 300px;
+    }
+
+    .sub-counter iframe {
+      width: 100%;
+      height: 150px;
+      border: none;
+    }
+
+    .social-links {
+      margin-top: 0rem;
+      margin-bottom: 56px;
+    }
+
+    .social-links a {
+      margin: 0 0.75rem;
+      color: #ff3333;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      color: #ff7b7b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: #200;
+      color: #bbb;
+    }
+
+.projects {
   display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  justify-content: flex-start; /* aligns to left */
+}
+.project-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #644;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #fbb;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+  width: 100%;
+  max-width: 400px; /* 🔧 This keeps it from getting too wide */
+  flex: 1 1 280px; 
 }
 
+.project-card:hover {
+  transform: scale(1.05);
+}
 
+.project-card a {
+  color: #ff1e2b;
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+.project-card h3 {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  margin-bottom: 0.5rem;
+  
+}
+
+.project-card a {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  align-content: space-between;
+}
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
   </style>
 </head>
 <body>
 
   <header class="navbar">
-    <div class="logo">ChipFlare</div>
+    <div class="logo">
+      <img src="logo-wide-1.png" alt="ChipFlare Logo" style="height: 40px;">
+    </div>
     <nav>
-      <a href="home.html">Home</a>
+      <a href="#">Home</a>
       <a href="projects.html">Projects</a>
       <a href="about.html">About</a>
     </nav>
   </header>
 
-<main class="content">
-  <p> UNDER CONSTRUCTION </p>
-</main>
+  <main class="content">
+    <h1>ChipFlare Studios!</h1>
+    <p>I make videos about tech</p>
 
+    <div class="video-wrapper">
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/MCGUYZ3Idpo?si=WUACeEuls2fpQF7c"
+          title="Never gonna give you up"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="sub-counter">
+        <iframe
+          src="https://livecounts.io/embed/youtube-live-subscriber-count/UCYpLYij7CA0bE44EHODR08Q" 
+          title="Live subscriber count"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <div class="social-links">
+      <a href="https://youtube.com/@exploringnew1" target="_blank">YouTube</a>
+      <a href="https://github.com/ChipFlare" target="_blank" >GitHub</a>
+    </div>
+    
+    <h1>Projects</h1>
+
+
+<div class="projects">
+  <div class="project-card">
+    <img src="CBPaint.webP" alt="screenshot" />
+    <h3>CBPaint</h3>
+    <a href="project.html#CBpaint">View Project</a>
+    <a href="projects.html">| More projects</a>
+  </div>
+  
+  <div class="project-card">
+    <img src="ScreenMirror.webP" alt="Screenshot" />
+    <h3>Screen mirror for CrapBox</h3>
+    <a href="project.html#screenmirror">View Project</a>
+    <a href="projects.html">| More projects</a>
+  </div>
+</div>
+  <footer>
+    &copy; 2025 ChipFlare Studios. All rights reserved.
+  </footer>
+
+      </main>
 </body>
 </html>

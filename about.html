@@ -13,22 +13,28 @@
     }
 
     body {
-        min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
       font-family: Arial, sans-serif;
-      background-color: #220000
+      background-color: #220000;
+      color: white;
+       margin-top: 80px;
     }
 
-    /* Navbar container */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: linear-gradient(45deg, #ff005c, #ff3800);
-      padding: 0.5rem 1rem;
-      color: white;
-    }
+.navbar {
+  position: fixed;
+  top: 0; /* make sure it sticks to the top */
+  left: 0;
+  width: 100%; /* span full width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #ff005c, #ff3800);
+  padding: 0.5rem 1rem;
+  color: white;
+  z-index: 1000; 
+}
 
     /* Website name */
     .navbar .logo {
@@ -107,7 +113,9 @@
 <body>
 
   <header class="navbar">
-    <div class="logo">ChipFlare</div>
+<div class="logo">
+  <a href="index.html"><img src="logo-wide-1.png" alt="ChipFlare Logo" style="height: 40px;"></a>
+</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
@@ -118,8 +126,8 @@
 <main class="content">
   <div class="about-box">
     <h1>About</h1>
-    <p>I'm just a teenager working on some projects in my free time for YouTube or just for fun sometimes. They range from simple Python applications to actual software made for Windows.</p>
-    <p>I also do Arduino stuff but don't post as much here because you probably don't have the hardware to run it on. I will still update you on the CrapBox project though.</p>
+    <p>I'm a youtuber who makes content about a ton of different stuff. I'm most instrested in tech and stuff so you can expect a lot of that kind of stuff on my channel!</p>
+    <p> If you feel like it, you can support our ShulkerCode project <a href="https://shulkercode.in" target="_blank">here</a></p>
   </div>
   <div class="about-box">
     <h1>Contact</h1>

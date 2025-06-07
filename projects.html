@@ -13,22 +13,28 @@
     }
 
     body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
       font-family: Arial, sans-serif;
-      background-color: #220000
+      background-color: #220000;
+      color: white;
+       margin-top: 80px;
     }
 
-    /* Navbar container */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: linear-gradient(45deg, #ff005c, #ff3800);
-      padding: 0.5rem 1rem;
-      color: white;
-    }
+.navbar {
+  position: fixed;
+  top: 0; /* make sure it sticks to the top */
+  left: 0;
+  width: 100%; /* span full width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #ff005c, #ff3800);
+  padding: 0.5rem 1rem;
+  color: white;
+  z-index: 1000; 
+}
 
     /* Website name */
     .navbar .logo {
@@ -129,7 +135,9 @@
 <body>
 
   <header class="navbar">
-    <div class="logo">ChipFlare</div>
+<div class="logo">
+  <a href="index.html"><img src="logo-wide-1.png" alt="ChipFlare Logo" style="height: 40px;"></a>
+</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
@@ -166,7 +174,7 @@
     <img src="hrif.jpg" alt="Screenshot" />
     <h3>Human readable image formt</h3>
     <p>Ever wanted to just open an image in notepad to download it directly to your brain? just me?</p>
-    <a href="project.html#flappywindows">View Project</a>
+    <a href="project.html#hrif">View Project</a>
   </div>
 </div>
 
