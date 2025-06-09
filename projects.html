@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ChipFlare Projects</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
     /* Basic reset */
     * {
@@ -37,10 +38,14 @@
   z-index: 1000; 
 }
 
-    /* Website name */
     .navbar .logo {
       font-size: 1.5rem;
       font-weight: bold;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .navbar .logo:hover {
+      transform: rotate(-2deg);
     }
 
     /* Navigation links */
@@ -99,7 +104,7 @@
   margin-top: auto; 
 }
 .project-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) ;
 }
 
 .project-card a {
@@ -187,7 +192,7 @@
   
   <div class="project-card">
     <a href="project.html#hrif"><img src="../images/hrif.jpg" alt="Screenshot" /></a>
-    <h3>Human readable image formt</h3>
+    <h3>HRIF</h3>
     <p>Ever wanted to just open an image in notepad to download it directly to your brain? just me?</p>
     <a href="project.html#hrif">View Project</a>
   </div>

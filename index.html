@@ -41,8 +41,13 @@
     .navbar .logo {
       font-size: 1.5rem;
       font-weight: bold;
+      transition: transform 0.3s ease, filter 0.3s ease;
     }
 
+    .navbar .logo:hover {
+      transform: rotate(-2deg);
+    }
+    
     .navbar nav a {
       color: white;
       text-decoration: none;
@@ -90,20 +95,24 @@
       max-width: 600px;
     }
 
-    .video-wrapper {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      width: 100%;
-      margin-bottom: 2rem;
-    }
+.video-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
 
     .video-container {
       flex: 1 1 500px;
       max-width: 800px;
       aspect-ratio: 16 / 9;
+      transition: transform 0.3s ease;
+    }
+    
+    .video-container:hover {
+      transform: rotate(2deg) scale(1.03);
+      box-shadow: 5px 12px 28px rgba(255,0,0,0.2);
     }
 
     .video-container iframe {
@@ -114,33 +123,48 @@
     }
 
     .sub-counter {
+      position: fixed;
+      bottom: 1rem;
+      right: -4rem;
       flex: 1 1 300px;
-      max-width: 300px;
+      z-index: 1000;
+      max-height: 69px;
+      transition: transform 0.3s ease;
+    }
+    
+    .sub-counter:hover {
+      transform: scale(1.3) translate(-30px,-30px);
     }
 
     .sub-counter iframe {
-      width: 100%;
-      height: 150px;
-      border: none;
+      width: 113%;
+      border: outset;
+      border-color: #900;
       border-radius: 10px;
+      box-shadow: 0 -8px 10px rgba(0, 0, 0, 0.5);
     }
 
-    .social-links {
-      margin-top: 0rem;
-      margin-bottom: 56px;
-    }
+.social-links {
+  perspective: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 18px;
+  margin-bottom: 68px;
+  border-bottom: 2px solid #330000;
+}
 
-    .social-links a {
-      margin: 0 0.75rem;
-      color: #ff3333;
-      font-size: 1.5rem;
-      transition: color 0.3s;
-      text-decoration: none;
-    }
+.social-links a img {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition: transform 0.5s ease;
+}
 
-    .social-links a:hover {
-      color: #ff7b7b;
-    }
+.social-links a img:hover {
+  transform: scale(1.5) rotate3d(1,1,1,360deg);
+}
 
     footer {
       text-align: center;
@@ -233,6 +257,15 @@
           allowfullscreen>
         </iframe>
       </div>
+      
+    <div class="social-links">
+      <a href="https://youtube.com/@exploringnew1" target="_blank"><img src="../images/socials/youtube.webP" alt="YouTube" style="height: 50px;"></a>
+      <a href="https://github.com/ChipFlare" target="_blank"><img src="../images/socials/github.webP" alt="GitHub" style="height: 50px;"></a>
+      <a href="https://discord.com/invite/A69cUwF8yy" target="_blank"><img src="../images/socials/discord.webP" alt="Discord" style="height: 50px;"></a>
+      <a href="https://www.reddit.com/r/Exploring_new/" target="_blank"><img src="../images/socials/reddit.webP" alt="Reddit" style="height: 50px;"></a>
+      <a href="https://www.instagram.com/minushadulwan?igsh=MXhuMXhwamR0dGd3ZQ==" target="_blank"><img src="../images/socials/instagram.webP" alt="Instagram" style="height: 50px;"></a>
+    </div>
+    </div>
 
       <div class="sub-counter">
         <iframe
@@ -241,12 +274,6 @@
           allowfullscreen>
         </iframe>
       </div>
-    </div>
-
-    <div class="social-links">
-      <a href="https://youtube.com/@exploringnew1" target="_blank">YouTube</a>
-      <a href="https://github.com/ChipFlare" target="_blank" >GitHub</a>
-    </div>
     
     <h1>Projects</h1>
 
