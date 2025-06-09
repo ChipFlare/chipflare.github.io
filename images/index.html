@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChipFlare</title>
+  <meta name="description" content="ChipFlare Studios, I make small projects with Python and Arduino and post them here!">
+  <meta name="robots" content="index, follow">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      background-color: #220000;
+      color: white;
+       margin-top: 100px;
+    }
+
+.navbar {
+  position: fixed;
+  top: 0; /* make sure it sticks to the top */
+  left: 0;
+  width: 100%; /* span full width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #ff005c, #ff3800);
+  padding: 0.5rem 1rem;
+  color: white;
+  z-index: 1000; 
+}
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .navbar .logo:hover {
+      transform: rotate(-2deg);
+    }
+    
+    .navbar nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar nav a:hover {
+      color: #ddd;
+    }
+
+    @media (max-width: 400px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .navbar nav {
+        margin-top: 0.5rem;
+      }
+      .navbar nav a {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+    }
+
+    .content {
+      flex: 1;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: #fbb;
+    }
+
+    .content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+.video-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+    .video-container {
+      flex: 1 1 500px;
+      max-width: 800px;
+      aspect-ratio: 16 / 9;
+      transition: transform 0.3s ease;
+    }
+    
+    .video-container:hover {
+      transform: rotate(2deg) scale(1.03);
+      box-shadow: 5px 12px 28px rgba(255,0,0,0.2);
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .sub-counter {
+      position: fixed;
+      bottom: 1rem;
+      right: -4rem;
+      flex: 1 1 300px;
+      z-index: 1000;
+      max-height: 69px;
+      transition: transform 0.3s ease;
+    }
+    
+    .sub-counter:hover {
+      transform: scale(1.3) translate(-30px,-30px);
+    }
+
+    .sub-counter iframe {
+      width: 113%;
+      border: outset;
+      border-color: #900;
+      border-radius: 10px;
+      box-shadow: 0 -8px 10px rgba(0, 0, 0, 0.5);
+    }
+
+.social-links {
+  perspective: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 18px;
+  margin-bottom: 68px;
+  border-bottom: 2px solid #330000;
+}
+
+.social-links a img {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition: transform 0.5s ease;
+}
+
+.social-links a img:hover {
+  transform: scale(1.5) rotate3d(1,1,1,360deg);
+}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: #200;
+      color: #bbb;
+    }
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  justify-content: flex-start; /* aligns to left */
+}
+.project-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #644;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #fbb;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+  width: 100%;
+  max-width: 400px; /* 🔧 This keeps it from getting too wide */
+  flex: 1 1 280px; 
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card a {
+  color: #ff1e2b;
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+.project-card h3 {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  margin-bottom: 0.5rem;
+  
+}
+
+.project-card a {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  align-content: space-between;
+}
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="../images/logo-wide-1.png" alt="ChipFlare Logo" style="height: 40px;">
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>ChipFlare Studios</h1>
+    <p>I make videos!</p>
+
+    <div class="video-wrapper">
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/MCGUYZ3Idpo?si=WUACeEuls2fpQF7c"
+          title="Never gonna give you up"
+          allowfullscreen>
+        </iframe>
+      </div>
+      
+    <div class="social-links">
+      <a href="https://youtube.com/@exploringnew1" target="_blank"><img src="../images/socials/youtube.webP" alt="YouTube" style="height: 50px;"></a>
+      <a href="https://github.com/ChipFlare" target="_blank"><img src="../images/socials/github.webP" alt="GitHub" style="height: 50px;"></a>
+      <a href="https://discord.com/invite/A69cUwF8yy" target="_blank"><img src="../images/socials/discord.webP" alt="Discord" style="height: 50px;"></a>
+      <a href="https://www.reddit.com/r/Exploring_new/" target="_blank"><img src="../images/socials/reddit.webP" alt="Reddit" style="height: 50px;"></a>
+      <a href="https://www.instagram.com/minushadulwan?igsh=MXhuMXhwamR0dGd3ZQ==" target="_blank"><img src="../images/socials/instagram.webP" alt="Instagram" style="height: 50px;"></a>
+    </div>
+    </div>
+
+      <div class="sub-counter">
+        <iframe
+          src="https://livecounts.io/embed/youtube-live-subscriber-count/UCYpLYij7CA0bE44EHODR08Q" 
+          title="Live subscriber count"
+          allowfullscreen>
+        </iframe>
+      </div>
+    
+    <h1>Projects</h1>
+
+
+<div class="projects">
+  <div class="project-card">
+    <a href="project.html#CBpaint"><img src="../images/CBPaint.webP" alt="screenshot" /></a>
+    <h3>Favourite: CBPaint</h3>
+    <a href="project.html#CBpaint">View Project</a>
+    <a href="projects.html">| More projects</a>
+  </div>
+  <div class="project-card">
+    <a href="project.html#efficiency"><img src="../images/efficiency.png" alt="screenshot" /></a>
+    <h3>Latest: Country map efficiency</h3>
+    <a href="project.html#countrymapefficiency">View Project</a>
+    <a href="projects.html">| More projects</a>
+  </div>
+</div>
+  <footer>
+    &copy; 2025 ChipFlare Studios. All rights reserved.
+  </footer>
+
+      </main>
+</body>
+</html>
