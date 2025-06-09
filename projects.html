@@ -19,8 +19,8 @@
       font-family: Arial, sans-serif;
       background-color: #220000;
       color: white;
-       margin-top: 80px;
-      margin-bottom: 80px;
+       padding-top: 80px;
+      padding-bottom: 80px;
     }
 
 .navbar {
@@ -78,12 +78,10 @@
     }
 
 .projects {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  justify-content: flex-start; /* aligns to left */
+  padding: 1rem;
 }
 .project-card {
   background-color: rgba(255, 255, 255, 0.1);
@@ -94,10 +92,12 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   transition: transform 0.2s ease;
   width: 100%;
-  max-width: 400px; /* 🔧 This keeps it from getting too wide */
-  flex: 1 1 280px; 
+  max-width: 400px; 
+  flex: 1 1 300px; 
 }
-
+.project-card a: {
+  margin-top: auto; 
+}
 .project-card:hover {
   transform: scale(1.05);
 }
@@ -117,7 +117,7 @@
 }
 
 .project-card p {
-  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  font-size: clamp(0.9rem, 2vw, 0.3rem);
   margin-bottom: 0.5rem;
 }
 
@@ -137,7 +137,7 @@
 
   <header class="navbar">
 <div class="logo">
-  <a href="index.html"><img src="logo-wide-1.png" alt="ChipFlare Logo" style="height: 40px;"></a>
+  <a href="index.html"><img src="../images/logo-wide-1.png" alt="ChipFlare Logo" style="height: 40px;"></a>
 </div>
     <nav>
       <a href="index.html">Home</a>
@@ -151,35 +151,42 @@
   </main>
 <div class="projects">
   <div class="project-card">
-    <img src="CBPaint.webP" alt="screenshot" />
+    <a href="project.html#CBpaint"><img src="../images/CBPaint.webP" alt="screenshot" /></a>
     <h3>CBPaint</h3>
     <p>Draw anything on this Windows app and it will appear on your CrapBox screen!</p>
     <a href="project.html#CBpaint">View Project</a>
   </div>
   
   <div class="project-card">
-    <img src="ScreenMirror.webP" alt="Screenshot" />
+    <a href="project.html#countrymapefficiency"><img src="../images/efficiency.png" alt="screenshot" /></a>
+    <h3>Country map efficiency</h3>
+    <p>How efficient is your countrys' map?</p>
+    <a href="project.html#countrymapefficiency">View Project</a>
+  </div>
+  
+  <div class="project-card">
+    <a href="project.html#screenmirror"><img src="../images/ScreenMirror.webP" alt="Screenshot" /></a>
     <h3>Screen mirror for CrapBox</h3>
     <p>Mirror your computer screen to your CrapBox screen!</p>
     <a href="project.html#screenmirror">View Project</a>
   </div>
 
   <div class="project-card">
-    <img src="Notesweeper.webP" alt="Screenshot" />
+    <a href="project.html#notesweeper"><img src="../images/Notesweeper.webP" alt="Screenshot" /></a>
     <h3>Notesweeper</h3>
     <p>Play the classic Minesweeper game in Notepad!</p>
     <a href="project.html#notesweeper">View Project</a>
   </div>
 
   <div class="project-card">
-    <img src="flappywindows.webP" alt="Screenshot" />
+    <a href="project.html#flappywindows"><img src="../images/flappywindows.webP" alt="Screenshot" /></a>
     <h3>Flappy Windows</h3>
     <p>It's just Flappy Bird? Then why are the windows moving weird?</p>
     <a href="project.html#flappywindows">View Project</a>
   </div>
   
   <div class="project-card">
-    <img src="hrif.jpg" alt="Screenshot" />
+    <a href="project.html#hrif"><img src="../images/hrif.jpg" alt="Screenshot" /></a>
     <h3>Human readable image formt</h3>
     <p>Ever wanted to just open an image in notepad to download it directly to your brain? just me?</p>
     <a href="project.html#hrif">View Project</a>
