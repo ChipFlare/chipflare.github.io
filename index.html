@@ -230,10 +230,32 @@
   border-radius: 6px;
   margin-bottom: 0.5rem;
 }
+    
+  #splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #220000; /* Optional background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+
+  #splash-screen img {
+    max-width: 100%;
+    max-height: 50%;
+  }
   </style>
 </head>
 <body>
 
+  
+  <div id="splash-screen">
+  <img src="../images/splash.gif" alt="Loading...">
+</div>
   <header class="navbar">
     <div class="logo">
       <img src="../images/logo-wide-1.png" alt="ChipFlare Logo" style="height: 40px;">
@@ -297,5 +319,14 @@
   </footer>
 
       </main>
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('splash-screen').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    }, 4000); 
+  });
+</script>
 </body>
+  
 </html>
