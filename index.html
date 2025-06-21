@@ -308,6 +308,12 @@
     <a href="projects.html">| More projects</a>
   </div>
   <div class="project-card">
+    <a href="project.html#CBpaint"><img src="../images/crapwatch.webP" alt="screenshot" /></a>
+    <h3>Ongoing: CrapWatch</h3>
+    <a href="project.html#crapwatch">View Project</a>
+    <a href="projects.html">| More projects</a>
+  </div>
+  <div class="project-card">
     <a href="project.html#efficiency"><img src="../images/efficiency.png" alt="screenshot" /></a>
     <h3>Latest: Country map efficiency</h3>
     <a href="project.html#countrymapefficiency">View Project</a>
@@ -325,7 +331,6 @@
     const main = document.getElementById('main-content');
 
     if (!sessionStorage.getItem('splashShown')) {
-      // Show splash and hide it after 4 seconds
       setTimeout(() => {
         splash.style.display = 'none';
         main.style.display = 'block';
@@ -333,7 +338,6 @@
 
       sessionStorage.setItem('splashShown', 'true');
     } else {
-      // Skip splash screen if already shown
       splash.style.display = 'none';
       main.style.display = 'block';
     }
