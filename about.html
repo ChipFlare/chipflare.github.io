@@ -24,16 +24,37 @@
 
 .navbar {
   position: fixed;
-  top: 0; /* make sure it sticks to the top */
+  top: 0;
   left: 0;
-  width: 100%; /* span full width */
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(45deg, #ff005c, #ff3800);
-  padding: 0.5rem 1rem;
   color: white;
-  z-index: 1000; 
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(45deg, #ff005c, #ff3800);
+  z-index: -1;
+  transition: opacity 1s ease;
+  opacity: 1;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: 0 22px 29px rgba(0, 0, 0, 0.8);
+}
+
+.navbar.scrolled::before {
+  opacity: 0.4;
+}
+
+.navbar.scrolled {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
     .navbar .logo {
@@ -168,5 +189,17 @@
   </ul>
 </div>
 </main>
+  
+<script>
+  const navbar = document.querySelector('.navbar');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script> 
 </body>
 </html>
