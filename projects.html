@@ -6,7 +6,6 @@
   <title>ChipFlare Projects</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
-    /* Basic reset */
     * {
       margin: 0;
       padding: 0;
@@ -20,45 +19,45 @@
       font-family: Arial, sans-serif;
       background-color: #220000;
       color: white;
-       padding-top: 80px;
+      padding-top: 80px;
       padding-bottom: 80px;
     }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  z-index: 1000;
-  padding: 0.5rem 1rem;
-    box-shadow: 0 1px 20px rgba(34, 0, 0, 1);
-}
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      z-index: 1000;
+      padding: 0.5rem 1rem;
+      box-shadow: 0 1px 20px rgba(34, 0, 0, 1);
+    }
 
-.navbar::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(45deg, #ff005c, #ff3800);
-  z-index: -1;
-  transition: opacity 1s ease;
-  opacity: 1;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-}
+    .navbar::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(45deg, #ff005c, #ff3800);
+      z-index: -1;
+      transition: opacity 1s ease;
+      opacity: 1;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
 
-.navbar.scrolled::before {
-  opacity: 0.4;
-}
+    .navbar.scrolled::before {
+      opacity: 0.4;
+    }
 
-.navbar.scrolled {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-    
+    .navbar.scrolled {
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
     .navbar .logo {
       font-size: 1.5rem;
       font-weight: bold;
@@ -69,7 +68,6 @@
       transform: rotate(-2deg);
     }
 
-    /* Navigation links */
     .navbar nav a {
       color: white;
       text-decoration: none;
@@ -82,7 +80,6 @@
       color: #ddd;
     }
 
-    /* Responsive: stack links on small screens */
     @media (max-width: 400px) {
       .navbar {
         flex-direction: column;
@@ -97,59 +94,60 @@
       }
     }
 
-    /* Page content */
     .content {
       padding: 1rem;
-      color: #f99
+      color: #f99;
     }
 
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-.project-card {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid #644;
-  border-radius: 8px;
-  padding: 1rem;
-  color: #fbb;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease;
-  width: 100%;
-  max-width: 400px; 
-  flex: 1 1 300px;
-}
-.project-card:hover {
-  transform: scale(1.05);
-}
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
 
-.project-card p {
-  font-size: clamp(0.9rem, 2vw, 0.3rem);
-  margin-bottom: 0.5rem;
-  color: #b77;
-}
+    .project-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid #644;
+      border-radius: 8px;
+      padding: 1rem;
+      color: #fbb;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease, border-radius 0.2s ease;
+      width: 100%;
+      max-width: 400px;
+      flex: 1 1 300px;
+    }
 
-.project-card a {
-  font-size: clamp(0.9rem, 2vw, 1rem);
-}
-.project-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
-} 
+    .project-card:hover {
+      transform: scale(1.05);
+      border-radius: 30px;
+    }
 
-    
+    .project-card p {
+      font-size: clamp(0.9rem, 2vw, 0.3rem);
+      margin-bottom: 0.5rem;
+      color: #b77;
+    }
+
+    .project-card a {
+      font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
   </style>
 </head>
 <body>
 
   <header class="navbar">
-<div class="logo">
-  <a href="index.html"><img src="../images/logo-wide-1.png" alt="ChipFlare Logo" style="height: 40px;"></a>
-</div>
+    <div class="logo">
+      <a href="index.html"><img src="../images/logo-wide-1.png" alt="ChipFlare Logo" style="height: 40px;"></a>
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
@@ -160,61 +158,42 @@
   <main class="content">
     <h1>Projects</h1>
   </main>
-<div class="projects">
-  <div class="project-card">
-    <a href="project.html#crapwatch"><img src="../images/crapwatch.webP" alt="screenshot" /></a>
-    <h3>CrapWatch</h3>
-    <p>It's like a smartwatch, but it's crap and lasts a month on a single charge!</p>
-  </div>
-  
-  <div class="project-card">
-    <a href="project.html#CBpaint"><img src="../images/CBPaint.webP" alt="screenshot" /></a>
-    <h3>CBPaint</h3>
-    <p>Draw anything on this Windows app and it will appear on your CrapBox screen!</p>
-  </div>
-  
-  <div class="project-card">
-    <a href="project.html#countrymapefficiency"><img src="../images/efficiency.png" alt="screenshot" /></a>
-    <h3>Country map efficiency</h3>
-    <p>How efficient is your countrys' map?</p>
-  </div>
-  
-  <div class="project-card">
-    <a href="project.html#screenmirror"><img src="../images/ScreenMirror.webP" alt="Screenshot" /></a>
-    <h3>CrapCast</h3>
-    <p>Mirror your computer screen to your CrapBox screen!</p>
+
+  <div class="projects" id="projectContainer">
+    <!-- Project cards will load here -->
   </div>
 
-  <div class="project-card">
-    <a href="project.html#notesweeper"><img src="../images/Notesweeper.webP" alt="Screenshot" /></a>
-    <h3>Notesweeper</h3>
-    <p>Play the classic Minesweeper game in Notepad!</p>
-  </div>
+  <script>
+    const navbar = document.querySelector('.navbar');
 
-  <div class="project-card">
-    <a href="project.html#flappywindows"><img src="../images/flappywindows.webP" alt="Screenshot" /></a>
-    <h3>Flappy Windows</h3>
-    <p>It's just Flappy Bird? Then why are the windows moving weird?</p>
-  </div>
-  
-  <div class="project-card">
-    <a href="project.html#hrif"><img src="../images/hrif.jpg" alt="Screenshot" /></a>
-    <h3>HRIF</h3>
-    <p>Ever wanted to just open an image in notepad to download it directly to your brain? just me?</p>
-  </div>
-</div>
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
 
-<script>
-  const navbar = document.querySelector('.navbar');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
-</script>
-  
+    // Load projects dynamically
+    fetch('projects.json')
+      .then(res => res.json())
+      .then(projects => {
+        const container = document.getElementById('projectContainer');
+        projects.forEach(project => {
+          const div = document.createElement('div');
+          div.className = 'project-card';
+          div.innerHTML = `
+            <a href="project.html#${project.id}"><img src="${project.img}" alt="Screenshot"></a>
+            <h3>${project.title}</h3>
+            <p>${project.desc}</p>
+          `;
+          container.appendChild(div);
+        });
+      })
+      .catch(error => {
+        document.getElementById('projectContainer').innerHTML = "<p>Failed to load projects.</p>";
+        console.error('Error loading project data:', error);
+      });
+  </script>
 </body>
 </html>

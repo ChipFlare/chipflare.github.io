@@ -1,0 +1,51 @@
+[
+  {
+    "id": "crapwatch",
+    "title": "CrapWatch (indev)",
+    "date": "September 2025",
+    "img": "../images/crapwatch.webP",
+    "desc": "This is a Smartwatch that will last 15 days on a single charge.\n\nIt will be using the ESP32 C3 XIAO MCU so it will have both Wi-Fi and Bluetooth so the possibilities are endless!\n\n## **Specifications**\n\n- **Processor**: ESP32-C3 (32-bit RISC-V, 160 MHz, Wi-Fi, BLE)\n- **Display**: 0.96\" SSD1306 OLED (128×64, monochrome, I²C)\n- **Battery**: LP403035 LiPo (3.7 V, ~700 mAh)\n- **Radio**: RDA5807M FM receiver (I²C)\n- **Audio**: Piezo speaker (tone output only, require earphones for radio)\n\n## **Features** \n- **Connectivity**: Wi-Fi, Bluetooth, I2C, USB Serial \n- **Output**: 128x64 Monochrome OLED, 3.5mm Audio jack for Radio \n- **Software**: Micropython, Python apps, App store \n- **Internet**: News, Weather, NTP Time\n\n## **Current Progress** \n- Designing Components ✔ \n- Designing Enclosure ✔ \n- waiting for parts ↻ \n\n There's a lot more to come so stay tuned!"
+  },
+  {
+    "id": "countrymapefficiency",
+    "title": "Country map efficiency",
+    "date": "08th June 2025",
+    "img": "../images/efficiency.png",
+    "desc": "I made a script to rank every country based on how efficiently they fit on a map.\n\nCheck the results for your own country in the spreadsheet below:\n\n[Spreadsheet](https://docs.google.com/spreadsheets/d/1ArDvmmSLIdZ_R8cZ_6kh80p3ol0UdFJZ/edit?usp=drive_link&ouid=103488618853458551528&rtpof=true&sd=true)"
+  },
+  {
+    "id": "CBpaint",
+    "title": "CBPaint",
+    "date": "16th May 2025",
+    "img": "../images/CBPaint.webP",
+    "desc": "CBPaint is a really cool project I made for the CrapBox or really any Arduino with a SSD1306 display attached to it.\n\nYou can upload the Arduino code it comes with to the Arduino or CrapBox and run the CBPaint Windows app to draw literally anything on the display! You can even upload images.\n\n[GitHub](https://github.com/ChipFlare/CBPaint) | [Google Drive](https://drive.google.com/file/d/1uqImnG6rmrzznz2BU0FDNViPvWIsPW5e/view?usp=drive_link)"
+  },
+  {
+    "id": "screenmirror",
+    "title": "CB Screen Mirror",
+    "date": "16th May 2025",
+    "img": "../images/ScreenMirror.webP",
+    "desc": "Screen mirror does exactly what the name suggests. It mirrors your computer screen to the CrapBox display.\n\nPretty cool when you want to watch a video on less than 144p (actually 64p) for no reason.\n\nThis comes bundled with the CBPaint application so you can find it in the same repository.\n\n[GitHub](https://github.com/ChipFlare/CBPaint) | [Google Drive](https://drive.google.com/file/d/1uqImnG6rmrzznz2BU0FDNViPvWIsPW5e/view?usp=drive_link)"
+  },
+  {
+    "id": "notesweeper",
+    "title": "Notesweeper",
+    "date": "06th August 2024",
+    "img": "../images/Notesweeper.webP",
+    "desc": "We all have played the classic Minesweeper game haven't we? Get ready to play it in Notepad. You get no extra features, just epilepsy!\n\n[YouTube](https://youtu.be/Jznk6-rx_uI?si=XB0wJdHH64IQ9bij) | [GitHub](https://github.com/ChipFlare/Notesweeper)"
+  },
+  {
+    "id": "hrif",
+    "title": "Human readable image format",
+    "date": "27th July 2024",
+    "img": "../images/hrif.jpg",
+    "desc": "It's basically what the name suggests. You can both view the image in photos and also read it in notepad. Image compression is non-existent but the image comes out lossy anyways.\n\n[YouTube](https://youtu.be/wdvXS7t5xfE?si=NlIskI2oVR0lPwbT) | [GitHub](https://github.com/ChipFlare/HRIF)"
+  },
+  {
+    "id": "flappywindows",
+    "title": "Flappy Windows",
+    "date": "14th May 2024",
+    "img": "../images/flappywindows.webP",
+    "desc": "It's Flappy Bird, but the windows move! Basically you launch the python script and it will make a bunch of windows that will be obstacles that you have to flap through.\n\n[YouTube Video](https://youtu.be/gOKNc6NsqAg?si=NrF_bNGH6z2V5qMK) | [GitHub](https://github.com/ChipFlare/Flappy-Windows)"
+  }
+]

@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ChipFlare | Project Title</title>
+
   <style>
     * {
       margin: 0;
@@ -12,50 +13,49 @@
     }
 
     body {
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
       font-family: Arial, sans-serif;
       background-color: #220000;
       color: white;
-  padding-top: 100px;
-  padding-bottom: 500px;
+      padding-top: 100px;
     }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  z-index: 1000;
-  padding: 0.5rem 1rem;
-    box-shadow: 0 1px 20px rgba(34, 0, 0, 1);
-}
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      z-index: 1000;
+      padding: 0.5rem 1rem;
+      box-shadow: 0 1px 20px rgba(34, 0, 0, 1);
+    }
 
-.navbar::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(45deg, #ff005c, #ff3800);
-  z-index: -1;
-  transition: opacity 1s ease;
-  opacity: 1;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-}
+    .navbar::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(45deg, #ff005c, #ff3800);
+      z-index: -1;
+      transition: opacity 1s ease;
+      opacity: 1;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
 
-.navbar.scrolled::before {
-  opacity: 0.4;
-}
+    .navbar.scrolled::before {
+      opacity: 0.4;
+    }
 
-.navbar.scrolled {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
+    .navbar.scrolled {
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
     .navbar .logo {
       font-size: 1.5rem;
       font-weight: bold;
@@ -101,233 +101,123 @@
     .project-title {
       font-size: 2rem;
       color: #fbb;
+      margin-bottom: 0.3em;
+    }
+
+    .time {
+      color: #944;
+      margin-bottom: 1rem;
+      font-size: small;
+    }
+
+    .project-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: flex-start;
     }
 
     .project-image {
-      width: 100%;
+      display: block;
       max-width: 600px;
+      width: 100%;
+      height: auto;
       border-radius: 8px;
-      margin-bottom: 1rem;
+      flex-shrink: 0;
     }
 
-    .project-description {
-      font-size: 1rem;
+    .project-text {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+      color: #fbb;
+    }
+
+    /* Markdown styling */
+    .project-description p {
+      margin-bottom: 1em;
       line-height: 1.6;
-      margin-bottom: 1rem;
+      color: #fbb;
     }
-    
-    .time {
-  color: #944;
-  margin-bottom: 1rem;
-      font-size: small
-}
 
-    
-.project-details {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: flex-start;
-}
+    .project-description a {
+      color: #ff6e6e;
+      text-decoration: none;
+    }
 
-.project-image {
-  display: block;
-  max-width: 600px; /* don't shrink */
-  height: auto;
-}
+    .project-description a:hover {
+      text-decoration: underline;
+    }
 
-.project-text {
-  flex: 1;
-  min-width: 300px;
-  max-width: 600px;
-}
+    .project-description strong, .project-description b {
+      color: #ff4a6e;
+    }
 
-    #screenmirror{scroll-margin-top: 60px;}
-    #crapwatch{scroll-margin-top: 60px;}
-    #flappywindows{scroll-margin-top: 60px;}
-    #hrif{scroll-margin-top: 60px;}
-    #notesweeper{scroll-margin-top: 60px;}
-    #countrymapefficiency{scroll-margin-top: 60px;}
-    #CBpaint{scroll-margin-top: 60px;}
-    
+    .project-description ul {
+      margin-left: 1.2em;
+      margin-bottom: 1em;
+    }
+
+    .project-description li {
+      margin-bottom: 0.5em;
+    }
   </style>
+
+  <!-- Markdown parser library -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 
   <header class="navbar">
-<div class="logo">
-  <a href="index.html"><img src="../images/logo-wide-1.png" alt="ChipFlare Logo" style="height: 40px;"></a>
-</div>
+    <div class="logo">
+      <a href="index.html"><img src="../images/logo-wide-1.png" alt="ChipFlare Logo" style="height: 40px;"></a>
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="about.html">About</a>
     </nav>
   </header>
-  
-<div class="content" id="crapwatch">
-    <h1 class="project-title">CrapWatch (indev)</h1>
-  <div class="time">~September 2025</div>
 
-<div class="project-details">
-  <img src="../images/crapwatch.webP" alt="Screenshot" class="project-image">
+  <main id="projectContent" class="content">Loading...</main>
 
-  <div class="project-text">
-    <p class="project-description">
-      This is a Smartwatch that will last a whole month on a single charge. It will be using the ESP32 C3 XIAO MCU so it will have both Wi-Fi and Bluetooth so the possibilities are endless!
-    </p>
+  <script>
+    const navbar = document.querySelector('.navbar');
+    const content = document.getElementById("projectContent");
+    const projectId = location.hash.slice(1); // get id from URL hash
 
-    <p class="project-description">
-    </p>
-  </div>
-</div>
-  </div>  
-  
-<div class="content" id="countrymapefficiency">
-    <h1 class="project-title">Country map efficiency</h1>
-  <div class="time">08th June 2025</div>
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 10);
+    });
 
-<div class="project-details">
-  <img src="../images/efficiency.png" alt="Screenshot" class="project-image">
-
-  <div class="project-text">
-    <p class="project-description">
-      I made a script to rank every country based on how efficiently they fit on a map. Check the results for your own country in the spreadsheet below
-    </p>
-
-    <p class="project-description">
-      Spreadsheet: <a href="https://docs.google.com/spreadsheets/d/1ArDvmmSLIdZ_R8cZ_6kh80p3ol0UdFJZ/edit?usp=drive_link&ouid=103488618853458551528&rtpof=true&sd=true" style="color:#ff6e6e;">Google Drive</a>
-    </p>
-  </div>
-</div>
-  </div>  
-
-<div class="content" id="CBpaint">
-    <h1 class="project-title">CBPaint</h1>
-  <div class="time">16th May 2025</div>
-
-<div class="project-details">
-  <img src="../images/CBPaint.webP" alt="Screenshot" class="project-image">
-
-  <div class="project-text">
-    <p class="project-description">
-      CBPaint is a really cool project I made for the CrapBox or really any Arduino with a SSD1306 display attached to it.
-      You can upload the Arduino code it comes with to the Arduino or CrapBox and run the CBPaint Windows app to draw literally anything on the display!
-      You can even upload images.
-    </p>
-
-    <p>
-      Github repository: <a href="https://github.com/ChipFlare/CBPaint" style="color:#ff6e6e;">Github</a>
-    </p>
-    <p class="project-description">
-      Compiled EXE (No future updates): <a href="https://drive.google.com/file/d/1uqImnG6rmrzznz2BU0FDNViPvWIsPW5e/view?usp=drive_link" style="color:#ff6e6e;">Google Drive</a>
-    </p>
-  </div>
-</div>
-  </div>
-  
-<div class="content" id="screenmirror">
-    <h1 class="project-title">CB Screen Mirror</h1>
-  <div class="time">16th May 2025</div>
-
-<div class="project-details">
-  <img src="../images/ScreenMirror.webP" alt="Screenshot" class="project-image">
-
-  <div class="project-text">
-    <p class="project-description">
-      Screen mirror does exactly what the name suggests. It mirrors your computer screen to the CrapBox display.
-      Pretty cool when you want to watch a video on less than 144p (actually 64p) for no reason.
-      This comes bundled with the CBPaint application so you can find it in the same repository.
-    </p>
-
-    <p>
-      Github repository: <a href="https://github.com/ChipFlare/CBPaint" style="color:#ff6e6e;">Github</a>
-    </p>
-    <p class="project-description">
-      Compiled EXE (No future updates): <a href="https://drive.google.com/file/d/1uqImnG6rmrzznz2BU0FDNViPvWIsPW5e/view?usp=drive_link" style="color:#ff6e6e;">Google Drive</a>
-    </p>
-  </div>
-</div>
-  </div>
-
-<div class="content" id="notesweeper">
-    <h1 class="project-title">Notesweeper</h1>
-  <div class="time">06th August 2024</div>
-
-<div class="project-details">
-  <img src="../images/Notesweeper.webP" alt="Screenshot" class="project-image">
-
-  <div class="project-text">
-    <p class="project-description">
-      We all have played the classic Minesweeper game haven't we? Get ready to play it in Notepad. You get no extra features, just epilepsy!
-    </p>
-
-    <p>
-      YouTube video: <a href="https://youtu.be/Jznk6-rx_uI?si=XB0wJdHH64IQ9bij" style="color:#ff6e6e;">YouTube</a>
-    </p>
-    <p class="project-description">
-      Github repository: <a href="https://github.com/ChipFlare/Notesweeper" style="color:#ff6e6e;">Github</a>
-    </p>
-  </div>
-</div>
-  </div>
-  
-
-  <div class="content" id="hrif">
-    <h1 class="project-title">Human readable image format</h1>
-    <div class="time">27th July 2024</div>
-
-<div class="project-details">
-  <img src="../images/hrif.jpg" alt="Screenshot" class="project-image">
-
-  <div class="project-text">
-    <p class="project-description">
-      It's basicaly what the name suggests. you can both view the image in photos and also read it in notepad. Image compression is non existent but the image comes out lossy anyways.
-    </p>
-
-    <p>
-      YouTube video (cringe): <a href="https://youtu.be/wdvXS7t5xfE?si=NlIskI2oVR0lPwbT" style="color:#ff6e6e;">YouTube</a>
-    </p>
-    <p class="project-description">
-      Github repository: <a href="https://github.com/ChipFlare/HRIF" style="color:#ff6e6e;">Github </a>
-    </p>
-  </div>
-</div>
-  </div>
-  
-  <div class="content" id="flappywindows">
-    <h1 class="project-title">Flappy Windows</h1>
-    <div class="time">14th May 2024</div>
-
-<div class="project-details">
-  <img src="../images/flappywindows.webP" alt="Screenshot" class="project-image">
-
-  <div class="project-text">
-    <p class="project-description">
-      It's Flappy Bird, but the windows move! Basically you launch the python script and it will make a bunch of windows that will be obstacles that you have to flap through. 
-    </p>
-
-    <p>
-      YouTube video (cringe): <a href="https://youtu.be/gOKNc6NsqAg?si=NrF_bNGH6z2V5qMK" style="color:#ff6e6e;">YouTube</a>
-    </p>
-    <p class="project-description">
-      Github repository: <a href="https://github.com/ChipFlare/Flappy-Windows" style="color:#ff6e6e;">Github </a>
-    </p>
-  </div>
-</div>
-  </div>
-  
-<script>
-  const navbar = document.querySelector('.navbar');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      navbar.classList.add('scrolled');
+    if (!projectId) {
+      window.location.href = "projects.html";
     } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
-</script>  
+      fetch("project-details.json")
+        .then(res => res.json())
+        .then(data => {
+          const project = data.find(p => p.id === projectId);
+          if (!project) {
+            content.innerHTML = "<h2 style='color:#f66'>Project not found.</h2>";
+            return;
+          }
 
+          content.innerHTML = `
+            <h1 class="project-title">${project.title}</h1>
+            <div class="time">${project.date}</div>
+            <div class="project-details">
+              <img src="${project.img}" alt="Screenshot" class="project-image">
+              <div class="project-text project-description">
+                ${marked.parse(project.desc)}
+              </div>
+            </div>
+          `;
+        })
+        .catch(err => {
+          content.innerHTML = "<h2 style='color:#f66'>Error loading project data.</h2>";
+          console.error(err);
+        });
+    }
+  </script>
 </body>
 </html>
