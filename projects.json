@@ -3,42 +3,56 @@
     "id": "crapwatch",
     "title": "CrapWatch",
     "desc": "It's like a smartwatch, but it's crap and lasts a month on a single charge!",
-    "img": "../images/crapwatch.webP"
+    "img": "../images/crapwatch.webP",
+    "status": "ongoing"
+  },
+  {
+    "id": "traceback",
+    "title": "TraceBack",
+    "desc": "It's just a normal puzzle game, hopefully...",
+    "img": "../images/traceback.jpg",
+    "status": "ongoing"
   },
   {
     "id": "CBpaint",
     "title": "CBPaint",
     "desc": "Draw anything on this Windows app and it will appear on your CrapBox screen!",
-    "img": "../images/CBPaint.webP"
+    "img": "../images/CBPaint.webP",
+    "status": "finished"
   },
   {
     "id": "countrymapefficiency",
     "title": "Country map efficiency",
     "desc": "How efficient is your countrys' map?",
-    "img": "../images/efficiency.png"
+    "img": "../images/efficiency.png",
+    "status": "finished"
   },
   {
     "id": "screenmirror",
     "title": "CrapCast",
     "desc": "Mirror your computer screen to your CrapBox screen!",
-    "img": "../images/ScreenMirror.webP"
+    "img": "../images/ScreenMirror.webP",
+    "status": "finished"
   },
   {
     "id": "notesweeper",
     "title": "Notesweeper",
     "desc": "Play the classic Minesweeper game in Notepad!",
-    "img": "../images/Notesweeper.webP"
+    "img": "../images/Notesweeper.webP",
+    "status": "finished"
   },
   {
     "id": "flappywindows",
     "title": "Flappy Windows",
     "desc": "It's just Flappy Bird? Then why are the windows moving weird?",
-    "img": "../images/flappywindows.webP"
+    "img": "../images/flappywindows.webP",
+    "status": "finished"
   },
   {
     "id": "hrif",
     "title": "HRIF",
     "desc": "Ever wanted to just open an image in notepad to download it directly to your brain? just me?",
-    "img": "../images/hrif.jpg"
+    "img": "../images/hrif.jpg",
+    "status": "finished"
   }
 ]

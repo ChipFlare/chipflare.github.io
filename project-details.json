@@ -1,8 +1,15 @@
 [
+   {
+    "id": "traceback",
+    "title": "TraceBack",
+    "date": "~2026 - In Development",
+    "img": "../images/traceback.jpg",
+    "desc": "I'm not going to spoil it already but it will be fun. The idea is so good _for me_ in fact, I don't even know if I will be able to pull this off. Currently working on some light stuff and it will hopefully come out on itch.io around 2026-2027!"
+  },
   {
     "id": "crapwatch",
-    "title": "CrapWatch (indev)",
-    "date": "September 2025",
+    "title": "CrapWatch",
+    "date": "~September 2025 - In Development",
     "img": "../images/crapwatch.webP",
     "desc": "This is a Smartwatch that will last 15 days on a single charge.\n\nIt will be using the ESP32 C3 XIAO MCU so it will have both Wi-Fi and Bluetooth so the possibilities are endless!\n\n## **Specifications**\n\n- **Processor**: ESP32-C3 (32-bit RISC-V, 160 MHz, Wi-Fi, BLE)\n- **Display**: 0.96\" SSD1306 OLED (128×64, monochrome, I²C)\n- **Battery**: LP403035 LiPo (3.7 V, ~700 mAh)\n- **Radio**: RDA5807M FM receiver (I²C)\n- **Audio**: Piezo speaker (tone output only, require earphones for radio)\n\n## **Features** \n- **Connectivity**: Wi-Fi, Bluetooth, I2C, USB Serial \n- **Output**: 128x64 Monochrome OLED, 3.5mm Audio jack for Radio \n- **Software**: Micropython, Python apps, App store \n- **Internet**: News, Weather, NTP Time\n\n## **Current Progress** \n- Designing Components ✔ \n- Designing Enclosure ✔ \n- waiting for parts ↻ \n\n There's a lot more to come so stay tuned!"
   },
