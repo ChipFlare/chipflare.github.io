@@ -18,14 +18,14 @@
     "title": "CBPaint",
     "date": "16th May 2025",
     "img": "../images/CBPaint.webP",
-    "desc": "CBPaint is a really cool project I made for the CrapBox or really any Arduino with a SSD1306 display attached to it.\n\nYou can upload the Arduino code it comes with to the Arduino or CrapBox and run the CBPaint Windows app to draw literally anything on the display! You can even upload images.\n\n[GitHub](https://github.com/ChipFlare/CBPaint) | [Google Drive](https://drive.google.com/file/d/1uqImnG6rmrzznz2BU0FDNViPvWIsPW5e/view?usp=drive_link)"
+    "desc": "CBPaint is a really cool project I made for the CrapBox or really any Arduino with a SSD1306 display attached to it.\n\nYou can upload the Arduino code it comes with to the Arduino or CrapBox and run the CBPaint Windows app to draw literally anything on the display! You can even upload images.\n\n## **Requirements** \n\n- a Computer with python 3 installed + all the libraries below \n- USB Port \n- a CrapBox or any Arduino with a SSD1306 connected \n\n## **Python Libraries** \n- tkinter \n- sys \n- keyboard  \n- pillow  \n- time  \n- os  \n- serial  \n-  numpy  \n- subprocess  \n- pyautogui  \n- copy  \n- winsound \n\n[GitHub](https://github.com/ChipFlare/CBPaint)"
   },
   {
     "id": "screenmirror",
     "title": "CB Screen Mirror",
     "date": "16th May 2025",
     "img": "../images/ScreenMirror.webP",
-    "desc": "Screen mirror does exactly what the name suggests. It mirrors your computer screen to the CrapBox display.\n\nPretty cool when you want to watch a video on less than 144p (actually 64p) for no reason.\n\nThis comes bundled with the CBPaint application so you can find it in the same repository.\n\n[GitHub](https://github.com/ChipFlare/CBPaint) | [Google Drive](https://drive.google.com/file/d/1uqImnG6rmrzznz2BU0FDNViPvWIsPW5e/view?usp=drive_link)"
+    "desc": "Screen mirror does exactly what the name suggests. It mirrors your computer screen to the CrapBox display.\n\nPretty cool when you want to watch a video on less than 144p (actually 64p) for no reason. This comes bundled with [CBPaint](https://chipflare.github.io/project.html#CBpaint) so check that out for more details"
   },
   {
     "id": "notesweeper",
